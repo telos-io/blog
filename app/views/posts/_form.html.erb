@@ -1,0 +1,28 @@
+<% if @post.errors.any? %>
+  <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<div class="form-group">
+    <%= form_for @post do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :body %>
+      <%= f.text_area :body, class: "form-control" %>
+    </div>
+    <!-- <div>
+      <%= f.label :tag %>
+      <%= f.text_field :all_tags, placeholder: "Tags separated with comma", class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label :image %>
+      <%= f.file_field :image, class: "form-control" %>
+    </div> -->
+    <%= f.submit "Submit Post", class: "btn btn-default" %>
+  <% end %>
+</div>
