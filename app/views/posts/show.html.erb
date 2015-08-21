@@ -5,22 +5,27 @@
   <span><%= link_to "delete", post_path(@post), method: :delete, data: {confirm: "Are you sure"} %></span>
 </div>
 
-<h2>Comments</h2>
-<%= @post.comments.each do |comment| %>
-  <div class="well">
-    <p><%= comment.body %></p>
-    <span><%= link_to "Delete", post_comment_path(@post, comment), method: :delete,
-                  data: {confirm: "Are you sure you want delete the answer?"} %></span>
-  </div>
+<% if @post.comments.empty? %>
+  <p> No comments</p>
+<% else %>
+  <h2>Comments</h2>
+  <%= @post.comments.each do |comment| %>
+    <div class="well">
+      <p><%= comment.body %></p>
+      <span><%= link_to "Delete", post_comment_path(@post, comment), method: :delete,
+                    data: {confirm: "Are you sure you want delete the answer?"} %></span>
+    </div>
+  <% end %>
+
+  <% if @comment.errors.any? %>
+     <ul>
+       <% @comment.errors.full_messages.each do |msg| %>
+         <li><%= msg %></li>
+       <% end %>
+     </ul>
+  <% end %>
 <% end %>
 
-<% if @comment.errors.any? %>
-  <ul>
-    <% @comment.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
 
 <h2>New Comment</h2>
 
