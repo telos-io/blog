@@ -6,14 +6,12 @@
   </ul>
 <% end %>
 <div class="form-group">
-    <%= form_for @post do |f| %>
+    <%= simple_form_for @post do |f| %>
     <div>
-      <%= f.label :title %>
-      <%= f.text_field :title, class: "form-control" %>
+      <%= f.input :title, class: "form-control" %>
     </div>
     <div>
-      <%= f.label :body %>
-      <%= f.text_area :body, class: "form-control" %>
+      <%= f.input :body, class: "form-control" %>
     </div>
     <!-- <div>
       <%= f.label :tag %>
