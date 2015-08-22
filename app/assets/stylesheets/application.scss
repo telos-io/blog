@@ -13,3 +13,21 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1, h2, h3 {
+    font-family: 'Cinzel', Georgia, serif!important;
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: 2px;
+}
+
+body {
+    font-family: Georgia, 'Nimbus Roman No9 L', 'Century Schoolbook L', serif!important;
+    font-size: 20px;
+    line-height: 1.45;
+    color: black;
+  }
+
+.container {
+    width:700px;    
+  }

@@ -3,12 +3,14 @@
 <head>
   <title>Telos Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', 'https://www.google.com/fonts#UsePlace:use/Collection:Cinzel:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div class ="container">
-    <%= link_to "All Posts", posts_path %> | 
+    <%= link_to "Home", root_path %> | 
+    <%= link_to "All Posts", posts_path %> |
     <%= link_to "New Post", new_post_path %>
 
     <%= yield %>

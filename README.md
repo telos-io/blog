@@ -1,5 +1,21 @@
 == README
 
+Telos Blog
+
+Features
+- Posts
+- Comments
+- Search
+X Tagging Posts
+X Admin and Commenters
+X Image upload
+X Mailer for post owner
+X Styling
+X AJAX on comments
+ 
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
