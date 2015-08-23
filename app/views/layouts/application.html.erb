@@ -8,24 +8,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-fixed-top">
+    <div class ="container">
+      <%= link_to "Home", root_path %> |
+      <%= link_to "All Posts", posts_path %> |
+      <% if user_signed_in? %>
+        <%= link_to "New Post", new_post_path %> |
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete,
+                data: {confirm: "Are you sure?"}  %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path %> |
+        <%= link_to "Log In", new_user_session_path %> |
+      <% end %>
+    <hr>
+  </nav>
   <div class ="container">
-    <%= link_to "Home", root_path %> |
-    <%= link_to "All Posts", posts_path %> |
-    <% if user_signed_in? %>
-      <%= link_to "New Post", new_post_path %> |
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete,
-              data: {confirm: "Are you sure?"}  %>
-    <% else %>
-      <%= link_to "Sign Up", new_user_registration_path %> |
-      <%= link_to "Log In", new_user_session_path %> |
-    <% end %>
-  <hr>
-    <span class="notice"><%= notice %></span>
-    <span class="alert"><%= alert %></span>
-
+    <span class="notice alert"><%= notice || alert %></span>
     <%= yield %>
 
-  </div>
+  </div> <!--container-->
 
 </body>
 </html>

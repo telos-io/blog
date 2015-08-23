@@ -6,7 +6,7 @@ Features
 - Posts
 - Comments
 - Search
-X Tagging Posts
+- Tagging Posts
 - Users
 X Admin and Commenters
 X Image upload
