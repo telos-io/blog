@@ -15,20 +15,66 @@
 @import "bootstrap";
 
 h1, h2, h3 {
-    font-family: 'Cinzel', Georgia, serif!important;
-    font-weight: 700;
-    margin: 1rem 0;
-    letter-spacing: 2px;
+  font-family: 'Cinzel', Georgia, serif!important;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: 2px;
 }
 
 body {
-    font-family: Georgia, 'Nimbus Roman No9 L', 'Century Schoolbook L', serif!important;
-    font-size: 20px;
-    line-height: 1.45;
-    color: black;
-    padding-top: 70px!important;
+  font-family: Georgia, 'Nimbus Roman No9 L', 'Century Schoolbook L', serif!important;
+  font-size: 20px;
+  line-height: 1.45;
+  color: black;
+  padding-top: 70px!important;
   }
 
 .container {
-    width:700px;
+  width:700px;
   }
+
+.navbar{
+  background-color: white;
+  padding-top:15px;
+}
+
+.nav-link{
+  display: inline;
+  padding-top: 10px!important;
+}
+
+.nav-link a{
+  text-decoration: none;
+  color:#d3d3d3;
+}
+
+h3 > a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+h3 > a:hover {
+  color: #000;
+}
+
+h3 > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+h3 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
