@@ -5,21 +5,23 @@
     <% end %>
   </ul>
 <% end %>
-<div class="form-group">
-    <%= simple_form_for @post do |f| %>
-    <div>
-      <%= f.input :title, class: "form-control" %>
-    </div>
-    <div>
-      <%= f.input :body, class: "form-control" %>
-    </div>
-    <div>
-      <%= f.input :tags, placeholder: "Tags separated with comma", class: "form-control" %>
-    </div>
-    <!-- <div>
-      <%= f.label :image %>
-      <%#= f.file_field :image, class: "form-control" %>
-    </div> -->
-    <%= f.submit "Submit Post", class: "btn btn-default" %>
-  <% end %>
-</div>
+<% if can? :create, @post %>
+  <div class="form-group">
+      <%= simple_form_for @post do |f| %>
+      <div>
+        <%= f.input :title, class: "form-control" %>
+      </div>
+      <div>
+        <%= f.input :body, class: "form-control" %>
+      </div>
+      <div>
+        <%= f.input :tags, placeholder: "Tags separated with comma", class: "form-control" %>
+      </div>
+      <!-- <div>
+        <%= f.label :image %>
+        <%#= f.file_field :image, class: "form-control" %>
+      </div> -->
+      <%= f.submit "Submit Post", class: "btn btn-default" %>
+    <% end %>
+  </div>
+<% end %>
