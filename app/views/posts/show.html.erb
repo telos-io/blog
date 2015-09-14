@@ -3,8 +3,10 @@
   <p><%= @post.body %></p>
   <p>Date: <%= @post.created_at %></p>
   <p>Tags: <%= @post.tags %></p>
-  <span><%= link_to "edit", edit_post_path(@post) %></span> |
-  <span><%= link_to "delete", post_path(@post), method: :delete, data: {confirm: "Are you sure"} %></span>
+  <% if can? :manage, @post %>
+    <span><%= link_to "edit", edit_post_path(@post) %></span> |
+    <span><%= link_to "delete", post_path(@post), method: :delete, data: {confirm: "Are you sure"} %></span>
+  <% end %>
 </div>
 
   <h2>New Comment</h2>
@@ -25,8 +27,10 @@
     <div class="well row">
       <p><%= comment.body %></p>
       <p><%= comment.created_at %></p>
-      <span><%= link_to "Delete", post_comment_path(@post, comment), method: :delete,
-                    data: {confirm: "Are you sure you want delete the answer?"} %></span>
+      <% if can? :manage, @comment %>
+        <span><%= link_to "Delete", post_comment_path(@post, comment), method: :delete,
+                    data: {confirm: "Are you sure you want delete the comment?"} %></span>
+      <% end %>
     </div>
 <% end %>
 
