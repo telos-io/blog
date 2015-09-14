@@ -4,8 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
   def admin?
-   self.role.name == "Admin"
+   self.role.name == "admin"
   end
-  
+
 end
