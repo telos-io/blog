@@ -8,7 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-fixed-top">
+
+  <div class="navbar navbar-fixed-top">
+    <div id="icon">
+        <span>Telos</span>
+    </div>
     <div class ="container">
       <h3 class="nav-link"><%= link_to "Home", root_path %> | </h3>
       <h3 class="nav-link"><%= link_to "All Posts", posts_path %> | </h3>
@@ -20,7 +24,7 @@
                 data: {confirm: "Are you sure?"}  %> | </h3>
       <% else %>
         <h3 class="nav-link"><%= link_to "Sign Up", new_user_registration_path %> | </h3>
-        <h3 class="nav-link"><%= link_to "Log In", new_user_session_path %> | </h3>
+        <h3 class="nav-link"><%= link_to "Log In", new_user_session_path %> </h3>
       <% end %>
     <hr>
   </nav>
