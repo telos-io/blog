@@ -79,17 +79,12 @@ h3 > a:hover:before {
   transform: scaleX(1);
 }
 
-.navbar{
-  padding-top:0px!important;
-  height:9em;
-}
-
-#icon{
-  background-color: black;
-  color: white;
-  height:75px;
+.icon{
+  color:white;
+  background-color:black;
+  font-size: 24px;
   width:3.75em;
-  display:inline;
+  margin-top:-12px;
 }
 
 #icon:hover{
