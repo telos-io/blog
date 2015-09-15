@@ -2,7 +2,7 @@
 <p>Meanwhile, back at the ranch ... </p>
 
 <h3>Latest Blog Post</h3>
-<h4><%= link_to "#{@post.title}", post_path(@post) %></h4>
+<h4><%#= link_to "#{@post.title}", post_path(@post) %></h4>
 
 <div class="well">
   <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
