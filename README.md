@@ -9,7 +9,7 @@ Features
 - Tagging Posts
 - Users
 - Admin and Commenters
-X Image upload
+- Image upload
 X Mailer for post owner
 X Styling
 X AJAX on comments
