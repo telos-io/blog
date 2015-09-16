@@ -7,6 +7,8 @@ class Post < ActiveRecord::Base
 
   validates :body, presence: true
 
+  mount_uploader :image, ImageUploader
+
   def self.search(search)
     where("title ILIKE ?", "%#{search}%")
     where("body ILIKE ?", "%#{search}%")

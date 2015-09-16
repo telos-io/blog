@@ -17,10 +17,9 @@
       <div>
         <%= f.input :tags, placeholder: "Tags separated with comma", class: "form-control" %>
       </div>
-      <!-- <div>
-        <%= f.label :image %>
-        <%#= f.file_field :image, class: "form-control" %>
-      </div> -->
+      <div>
+        <%= f.input :image, class: "form-control" %>
+      </div>
       <%= f.submit "Submit Post", class: "btn btn-default" %>
     <% end %>
   </div>
