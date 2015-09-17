@@ -11,7 +11,8 @@ Features
 - Admin and Commenters
 - Image upload
 X Mailer for post owner
-X Styling
+X MD for posts
+- Styling
 X AJAX on comments
 
 
