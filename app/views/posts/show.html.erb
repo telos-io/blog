@@ -28,12 +28,12 @@
    </ul>
 <% end %>
 
-<% if @post.comments.empty? %>
-  <p> No comments</p>
-<% else %>
-  <% @post.comments.each do |comment| %>
-    <div id="comment" class="well">
-        <%= render "/comments/comment", comment: comment %>
-    </div>
+<div id="comment" class="well">
+  <% if @post.comments.empty? %>
+    <p> No comments</p>
+  <% else %>
+    <% @post.comments.each do |comment| %>
+          <%= render "/comments/comment", comment: comment %>
+    <% end %>
   <% end %>
-<% end %>
+</div>
