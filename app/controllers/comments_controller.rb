@@ -14,11 +14,15 @@ class CommentsController < ApplicationController
     @comment = Comment.new comment_params
     @post = Post.find params[:post_id]
     @comment.post = @post
-    if @comment.save
-      redirect_to post_path(@post), alert: "Comment Created"
-    else
-      redirect_to post_path(@post), alert: "Try again"
-    end
+    respond_to do |format|
+     if @comment.save
+       format.html { redirect_to post_path(@post), notice: "comment created" }
+       format.js   { render } # this renders: create.js.erb
+     else
+       format.html { render "/post/show" }
+       format.js   { render js: "alert('failure');"}
+     end
+   end
   end
 
   def destroy
