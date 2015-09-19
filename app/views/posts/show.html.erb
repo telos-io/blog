@@ -10,14 +10,14 @@
   <% end %>
 </div>
 
-<h2>New Comment</h2>
-<div class="row">
-  <%= simple_form_for [@post, @comment], remote: true do |f| %>
-    <div>
-      <%= f.input :body %>
-    </div>
-      <%= f.button :submit, class: "btn btn-default" %>
-  <% end %>
+<h3>New Comment</h3>
+<div class="form-group clearfix">
+    <%= simple_form_for [@post, @comment], remote: true do |f| %>
+      <div>
+        <%= f.input :body %>
+      </div>
+        <%= f.button :submit, class: "btn btn-default" %>
+    <% end %>
 </div>
 
 <% if @comment.errors.any? %>
@@ -28,12 +28,12 @@
    </ul>
 <% end %>
 
-<div id="comment" class="well">
+<div id="comment">
   <% if @post.comments.empty? %>
     <p> No comments</p>
   <% else %>
-    <% @post.comments.each do |comment| %>
-          <%= render "/comments/comment", comment: comment %>
-    <% end %>
+      <% @post.comments.each do |comment| %>
+            <%= render "/comments/comment", comment: comment %>
+      <% end %>
   <% end %>
 </div>
