@@ -10,10 +10,11 @@ Features
 - Users
 - Admin and Commenters
 - Image upload
+X AWS storage
 X Mailer for post owner
 X MD for posts
 - Styling
-X AJAX on comments
+- AJAX on comments
 
 
 
