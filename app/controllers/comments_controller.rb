@@ -16,6 +16,7 @@ class CommentsController < ApplicationController
     @comment.post = @post
     respond_to do |format|
      if @comment.save
+       PostsMailer.notify_post_owner(@comment).deliver_now
        format.html { redirect_to post_path(@post), notice: "comment created" }
        format.js   { render } # this renders: create.js.erb
      else

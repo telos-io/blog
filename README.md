@@ -2,17 +2,20 @@
 
 Telos Blog
 
+http://telos-blog.herokuapp.com/
+
 Features
 - Posts
 - Comments
 - Search
-- Tagging Posts
+- Tagged Posts
 - Users
 - Admin and Commenters
 - Image upload
-X AWS storage
-X Mailer for post owner
-X MD for posts
+X AWS storage for production
+- mailer for post owner
+- Added excerpts on index page
+- MD for posts
 - Styling
 - AJAX on comments
 
