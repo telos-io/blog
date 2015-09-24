@@ -1,5 +1,8 @@
 <nav class="navbar navbar-fixed-top">
   <a href="http://telos.io" class="navbar-brand icon">Telos</a>
+  <% if user_signed_in? %>
+    <span class="pull-right"><%= "#{@user.email}" %></span>
+  <% end %>
   <div class ="container">
     <h3 class="nav-link"><%= link_to "Home", root_path %> | </h3>
     <h3 class="nav-link"><%= link_to "All Posts", posts_path %> | </h3>
