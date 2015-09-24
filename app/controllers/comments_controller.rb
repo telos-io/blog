@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new comment_params
     @post = Post.find params[:post_id]
     @comment.post = @post
+    @comment.user = current_user
     respond_to do |format|
      if @comment.save
        PostsMailer.notify_post_owner(@comment).deliver_now

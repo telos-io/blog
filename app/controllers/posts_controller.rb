@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new post_params
+    @post.user = current_user
     if @post.save
       redirect_to post_path(@post), notice: "Post created"
     else
