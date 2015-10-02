@@ -1,10 +1,9 @@
 <h1>Telos Blog</h1>
-<p>Meanwhile, back at the ranch ... </p>
+<p>A full portfolio will be coming soon.  In the meantime, why not enjoy some lovely blog type things.</p>
 
 <h3>Latest Blog Post</h3>
 <h4><%= link_to "#{@post.title}", post_path(@post) %></h3>
 <p><%= shorten(@post.body) %></p>
-
 
 <div class="well">
   <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
