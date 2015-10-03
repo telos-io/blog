@@ -35,7 +35,7 @@ gem 'rails_12factor'
 gem 'carrierwave'
 gem "rmagick"
 gem 'aws-sdk'
-gem "fog"
+gem "fog-aws"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
