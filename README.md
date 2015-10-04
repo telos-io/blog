@@ -12,7 +12,7 @@ Features
 - Users
 - Admin and Commenters
 - Image upload
-X AWS storage for production
+- AWS storage for production
 - mailer for post owner
 - Added excerpts on index page
 - MD for posts
