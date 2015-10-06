@@ -1,19 +1,42 @@
-<h1>Telos Blog</h1>
-<p>A full portfolio will be coming soon.  In the meantime, why not enjoy some lovely blog type things.</p>
+<article>
+  <h1>Telos Digital Engagement:</br>  Full Stack Web Development</h1>
+  <p>Telos is a full service web shop.  From digital strategy to design, full stack web development, maintenance, and training, Telos can look after your needs</p>
+  <p>I have experience in the following technologies and methodologies: HTML, CSS, Javascript, React JS, Wordpress, Ruby, Rails, Git, Sketch App, AJAX, JSON, Bootstrap, Agile, TDD, Lean UX.</p>
+  <p>Reach out today and get the help you need.</p>
+</article>
 
-<h3>Latest Blog Post</h3>
-<h4><%= link_to "#{@post.title}", post_path(@post) %></h3>
-<p><%= shorten(@post.body) %></p>
+<h3>Projects</h3>
+  <ul>
+    <li>Code Racer</li>
+    <li>Bard or Tweet</li>
+    <li>Blog</li>
+  </ul>
 
-<div class="well">
-  <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-    <%= submit_tag "Search" %>
-<% end %>
+<h3>Client Work</h3>
+  <ul>
+    <li>Vocal Ease</li>
+    <li>One Woman's Journey</li>
+    <li>Fingerfun</li>
+    <li>Meetup Roadwarrior</li>
+    <li>Hostuitive</li>
+  </ul>
+<div class="jumbotron">
+  <h3>Latest Blog Post</h3>
+  <h4><%= link_to "#{@post.title}", post_path(@post) %></h4>
+  <p><%= shorten(@post.body) %></p>
 </div>
 
-<% if @posts.present? %>
-  <%= render @posts %>
-<% elsif params[:search].present? %>
-  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
-<% end %>
+<h3>About Me</h3>
+<ul>
+  <li>Experience: One year of design and development experience. And I have over 10 years of work experience in a number of different occupations and a track record of success in all of them.</li>
+  <li>Education: Web Development and Digital Marketing certificate, BA (Psychology), and a raft of other professional certifications.</li>
+  <li>Interests: Besides making things, I enjoy Improv comedy, reading, volunteering, meeting new people, sasqwatching and coffee. Always coffee.</li>
+</ul>
+
+<h3>Contact</h3>
+<p>Interested in working together?  Send me an email with some details about the project and allow me a day or two to respond.</p>
+<ul>
+  <li>Location: Vancouver, BC</li>
+  <li>Skype: koan.brown</li>
+  <li>Email: <a href="mailto:kb@telos.io">kb@telos.io</a></li>
+</ul>
