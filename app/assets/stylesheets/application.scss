@@ -9,7 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ *= require bxslider
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -30,10 +30,10 @@ body {
   overflow: auto!important;
   }
 
-  footer {
-    background-color: #D3D3D3;
-    padding-top: 20px;
-  }
+footer {
+  background-color: #D3D3D3;
+  padding-top: 20px;
+}
 
 .container {
   width:700px;
@@ -51,7 +51,7 @@ body {
 
 .nav-link a{
   text-decoration: none;
-  color:#d3d3d3;
+  color:#5E5E5E;
 }
 
 h3 > a {
@@ -61,7 +61,7 @@ h3 > a {
 }
 
 h3 > a:hover {
-  color: #000;
+  color: purple;
 }
 
 h3 > a:before {
@@ -71,7 +71,7 @@ h3 > a:before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: purple;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -96,10 +96,6 @@ h3 > a:hover:before {
 .icon:hover{
   background-color:purple;
   color:white;
-}
-
-.body-input{
-  height:8em;
 }
 
 #post_body {
