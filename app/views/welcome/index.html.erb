@@ -1,43 +1,57 @@
 <article>
   <h1>Telos Digital Engagement:</br>  Full Stack Web Development</h1>
+  <p>This portfolio is a work in progress</p>
   <p>Telos is a full service web shop.  From digital strategy to design, full stack web development, maintenance, and training, Telos can look after your needs. I have experience in the following technologies and methodologies: HTML, CSS, Javascript, React JS, Wordpress, Ruby, Rails, Git, Sketch App, AJAX, JSON, Bootstrap, Agile, TDD, Lean UX.</p>
   <p>Reach out today and get the help you need.  Scroll down for more information about Telos or head on over to the <%= link_to "blog", posts_path %> for some of my thoughts on web development.</p>
 </article>
 
-<div class="jumbotron">
-  <h3>Projects</h3>
-    <ul class="bxslider">
-      <li>Code Racer</li>
-      <li>Bard or Tweet</li>
-      <li>Blog</li>
+<section class="section">
+  <div class="jumbotron">
+    <h3 class="bottom-spacing-jumbo">Projects</h3>
+      <ul class="bxslider1">
+        <li><%= image_tag("code-racer-logo.png", class: "center-block") %><p>Code Racer.  Improve your typing on live code examples.</p></li>
+        <li><%= image_tag("bard.png", class: "center-block") %><p>Can you tell the difference between <a href="bard-or-tweet.heroku.com">Twitter and the Bard</a>?</p></li>
+        <li><%= image_tag("telos.png", class: "center-block") %><p>This blog runs on Ruby, Rails, Javascript and Bootstrap.</p></li>
+      </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Client Work</h3>
+    <ul class="bxslider2">
+      <li><a href="http://www.vocalease.ca"><%= image_tag("vocalease.png")%><span>Vocal Ease</span></a></li>
+      <li><a href="http://www.onewomansjourney.ca"><%= image_tag("OWJ.png")%>One Woman's Journey</a></li>
+      <li><a href="http://www.fingerfun.ca"><%= image_tag("fingerfun.png")%>Fingerfun</a></li>
+      <li><a href="http://www.meetup-roadwarrior"><%= image_tag("meetup-roadwarrior.png")%>Meetup Roadwarrior</a></li>
+      <li><a href="http://telos.io"><%= image_tag("old-portfolio.png")%>My Old Portfolio</a></li>
+      <li><a href="http://"><%= image_tag("hostuitive.png")%>Hostuitive</a></li>
     </ul>
-</div>
+</section>
 
-<h3>Client Work</h3>
-  <ul class="bxslider">
-    <li>Vocal Ease</li>
-    <li>One Woman's Journey</li>
-    <li>Fingerfun</li>
-    <li>Meetup Roadwarrior</li>
-    <li>Hostuitive</li>
+<section class="section">
+  <div class="jumbotron">
+    <h3>Latest Blog Post</h3>
+    <h4><%= link_to "#{@post.title}", post_path(@post) %></h4>
+    <p><%= shorten(@post.body) %></p>
+  </div>
+</section>
+
+<section class="section">
+  <h3>About Me</h3>
+  <%= image_tag("koan.jpg", class: "pull-right") %>
+  <ul>
+    <li>Experience: One year of design and development experience. And I have over 10 years of work experience in a number of different occupations and a track record of success in all of them.</li>
+    <li>Education: Web Development and Digital Marketing certificate, BA (Psychology), and a raft of other professional certifications.</li>
+    <li>Interests: Besides making things, I enjoy Improv comedy, reading, volunteering, meeting new people, sasqwatching and coffee. Always coffee.</li>
   </ul>
-<div class="jumbotron">
-  <h3>Latest Blog Post</h3>
-  <h4><%= link_to "#{@post.title}", post_path(@post) %></h4>
-  <p><%= shorten(@post.body) %></p>
-</div>
+</section>
 
-<h3>About Me</h3>
-<ul>
-  <li>Experience: One year of design and development experience. And I have over 10 years of work experience in a number of different occupations and a track record of success in all of them.</li>
-  <li>Education: Web Development and Digital Marketing certificate, BA (Psychology), and a raft of other professional certifications.</li>
-  <li>Interests: Besides making things, I enjoy Improv comedy, reading, volunteering, meeting new people, sasqwatching and coffee. Always coffee.</li>
-</ul>
-
-<h3>Contact</h3>
-<p>Interested in working together?  Send me an email with some details about the project and allow me a day or two to respond.</p>
-<ul>
-  <li>Location: Vancouver, BC</li>
-  <li>Skype: koan.brown</li>
-  <li>Email: <a href="mailto:kb@telos.io">kb@telos.io</a></li>
-</ul>
+<section class="section">
+  <h3>Contact</h3>
+  <p>Interested in working together?  Send me an email with some details about the project and allow me a day or two to respond.</p>
+  <ul>
+    <li>Location: Vancouver, BC</li>
+    <li>Skype: koan.brown</li>
+    <li>Email: <a href="mailto:kb@telos.io">kb@telos.io</a></li>
+  </ul>
+</section>

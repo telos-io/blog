@@ -3,4 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  $(".bxslider").bxSlider()
+  $(".bxslider1").bxSlider()
+
+  $(".bxslider2").bxSlider({
+    slideWidth: 330,
+    minSlides: 2,
+    maxSlides: 2,
+    slideMargin: 10
+  })
+
+  $( ".fade" ).fadeTo( "slow" );
