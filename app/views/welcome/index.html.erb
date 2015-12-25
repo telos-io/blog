@@ -5,29 +5,41 @@
   div#main-container {}
   footer#main-footer {display: none}
 <% end %>
-
-<header>
+<div class="row">
   <nav class="nav navbar-nav pull-right" id="portfolio-nav">
     <h3 class="nav-link"><a href="#projects"%>Projects</a> | </h3>
     <h3 class="nav-link"><a href="#about"%>About</a> | </h3>
     <h3 class="nav-link"><a href="#blog"%>Blog</a> | </h3>
     <h3 class="nav-link"><a href="#contact"%>Contact</a></h3>
   </nav>
-</header>
-
+</div>
+<div id="portfolio-banner">
   <div class="row">
-    <!--header image, headline-->
-    <div><!--panel--></div>
-    <div><!--panel--></div>
+    <div class="headline-box">
+      <h1 class="text-center text-white">Telos Digital Engagement</h1>
+      <h3 class="text-center text-white">Full Stack Web Development</h3>
+    </div>
   </div>
+  <div class="row">
+    <div class="panel panel-default col-lg-5 feature-box">
+      <div class="panel-heading">Modern Technologies</div>
+      <div class="panel-body">Angular JS, Javascript, HTML5, CSS, Ruby, Rails, and Wordpress spoken here.</div>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="panel panel-default col-lg-5 feature-box">
+      <div class="panel-heading">Business Problem Focus</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+  </div>
+</div>
 
   <section class="section">
+    <h3>Projects</h3>
     <div class="jumbotron">
-      <h3 class="bottom-spacing-jumbo">Projects</h3>
         <ul class="bxslider1">
-          <li><a href="http://warm-river-3217.herokuapp.com/"><%= image_tag("code-racer-logo.png", class: "center-block") %><p>Code Racer</a>.  Improve your typing on live code examples.</p></li>
-          <li><a href="http://www.bard-or-tweet.com/"><%= image_tag("bard.png", class: "center-block") %></a><p>Can you tell the difference between <a href="http://bard-or-tweet.heroku.com">Twitter and the Bard</a>?</p></li>
-          <li><a href="http://telos-blog.heroku.com/posts"><%= image_tag("telos.png", class: "center-block") %><p>This blog</a> runs on Ruby, Rails, Javascript and Bootstrap.</p></li>
+          <li><a href="http://warm-river-3217.herokuapp.com/"><%= image_tag("code-racer-logo.png", class: "center-block") %><p class="text-center">Code Racer</a>.  Improve your typing on live code examples.</p></li>
+          <li><a href="http://www.bard-or-tweet.com/"><%= image_tag("bard.png", class: "center-block") %></a><p class="text-center">Can you tell the difference between <a href="http://bard-or-tweet.heroku.com">Twitter and the Bard</a>?</p></li>
+          <li><a href="http://telos-blog.heroku.com/posts"><%= image_tag("telos.png", class: "center-block") %><p class="text-center">This blog</a> runs on Ruby, Rails, Javascript and Bootstrap.</p></li>
         </ul>
     </div>
 
