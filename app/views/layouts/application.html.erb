@@ -6,12 +6,13 @@
   <%= stylesheet_link_tag    'application', 'https://www.google.com/fonts#UsePlace:use/Collection:Cinzel:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style><%= yield :stylesheets %></style>
 </head>
 <body>
 
   <%= render "/layouts/nav" %>
 
-  <div class ="container">
+  <div class ="container" id="main-container">
     <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, class: "alert alert-info" %>
     <% end %>
@@ -19,7 +20,7 @@
     <%= yield %>
 
   </div> <!--container-->
-  <footer class="section">
+  <footer class="section" id="main-footer">
     <div class="container">
       <span class="pull-left">Linked In: <a href="https://www.linkedin.com/in/koanbrown">Koan Brown</a></span>
       <span class="pull-right">Github: <a href="https://github.com/telos-io">Telos Digital Engagement</a></span>
