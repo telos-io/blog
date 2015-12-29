@@ -44,6 +44,10 @@ footer {
   padding-top:15px;
 }
 
+#portfolio-nav{
+  margin-right:3%;
+}
+
 .nav-link{
   display: inline;
   padding-top: 10px!important;
@@ -109,13 +113,41 @@ h3 > a:hover:before {
 .headline-box{
   background-color: rgba(0, 0, 0, 0.8);
   width:48%;
-  margin:auto;
+  padding:12px;
+  margin:0 auto;
 }
 
 #portfolio-banner{
   background-image: image-url('banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+}
+
+.feature-box{
+  background-color: rgba(0, 0, 0, 0.8)!important;
+  margin-top:-40px;
+  border: none!important;
+}
+
+.feature-box .panel-heading{
+  background-color: rgba(0, 0, 0, 0.8)!important;
+  color:white;
 }
 
 .text-white{
   color: white;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.sm-icon{
+  height:48px;
+  width:auto;
+  padding-bottom:20px;
 }
