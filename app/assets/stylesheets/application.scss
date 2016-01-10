@@ -11,6 +11,7 @@
  * file per style scope.
  *= require bxslider
  */
+@import "normalize";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -44,8 +45,9 @@ footer {
   padding-top:15px;
 }
 
-#portfolio-nav{
-  margin-right:3%;
+.vertical-align {
+  display: flex;
+  align-items: center;
 }
 
 .nav-link{
@@ -117,8 +119,14 @@ h3 > a:hover:before {
   margin:0 auto;
 }
 
+//styling for portfolio page
+
+#portfolio-nav{
+  margin-right:3%;
+}
+
 #portfolio-banner{
-  background-image: image-url('banner.png');
+  background-image: image-url('banner.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -141,13 +149,12 @@ h3 > a:hover:before {
   color: white;
 }
 
-.vertical-align {
-  display: flex;
-  align-items: center;
-}
-
 .sm-icon{
   height:48px;
   width:auto;
   padding-bottom:20px;
+}
+
+.about-img{
+  border-radius: 50%
 }
