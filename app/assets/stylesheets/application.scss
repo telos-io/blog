@@ -126,7 +126,7 @@ h3 > a:hover:before {
 }
 
 #portfolio-banner{
-  background-image: image-url('banner.jpg');
+  background-image: image-url('stars.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -138,6 +138,8 @@ h3 > a:hover:before {
   background-color: rgba(0, 0, 0, 0.8)!important;
   margin-top:-40px;
   border: none!important;
+  -webkit-box-shadow: 1px 1px 1px 1px #4A4A4A;
+  box-shadow: 1px 1px 1px 1px #4A4A4A;
 }
 
 .feature-box .panel-heading{
