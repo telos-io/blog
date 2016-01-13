@@ -11,9 +11,9 @@
  * file per style scope.
  *= require bxslider
  */
-@import "normalize";
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
 h1, h2, h3, h4 {
   font-family: 'Cinzel', Georgia, serif!important;
@@ -130,7 +130,7 @@ h3 > a:hover:before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 450px;
+  height: 520px;
   width: 100%;
 }
 
@@ -159,4 +159,8 @@ h3 > a:hover:before {
 
 .about-img{
   border-radius: 50%
+}
+
+body {
+  margin: 0;
 }
