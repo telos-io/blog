@@ -5,6 +5,7 @@
   div#main-nav {display: none}
   footer#main-footer {display: none}
 <% end %>
+
 <div class="row">
   <nav class="nav navbar-nav pull-right" id="portfolio-nav">
     <h3 class="nav-link"><a href="#projects"%>Projects</a> | </h3>
@@ -13,6 +14,7 @@
     <h3 class="nav-link"><a href="#contact"%>Contact</a></h3>
   </nav>
 </div>
+
 <div class="row">
   <div class="vertical-align" id="portfolio-banner">
     <div class="headline-box">
@@ -40,13 +42,15 @@
   </div>
 
 <div class="container">
+  <div class="row">
+    <section class="section">
+      <h3>Telos</h3>
+      <p>noun, plural teloi  [tel-oi, tee-loi]</p>
+      <p>Def., the end term of a goal-directed process; especially, the Aristotelian final cause.<sup><a href="http://dictionary.reference.com/browse/telos">1</a></sup>  This stands apart from, but not in opposition to, techne, the word root of technology.</p>
+    </section>
+  </div>
 
-  <section class="section">
-    <h3>Telos</h3>
-    <p>noun, plural teloi  [tel-oi, tee-loi]</p>
-    <p>Def., the end term of a goal-directed process; especially, the Aristotelian final cause.<sup><a href="http://dictionary.reference.com/browse/telos">1</a></sup>  This stands apart from, but not in opposition to, techne, the word root of technology.</p>
-  </section>
-
+<div class="row">
   <section class="section" id="projects">
     <h3>Projects</h3>
     <div class="jumbotron">
@@ -56,7 +60,9 @@
           <li><a href="http://telos-blog.heroku.com/posts"><%= image_tag("telos.png", class: "center-block") %><p class="text-center">This blog</a> runs on Ruby, Rails, Javascript and Bootstrap.</p></li>
         </ul>
     </div>
+</div>
 
+<div class="row">
     <h3>Client Work</h3>
       <ul class="bxslider2">
         <li><a href="http://www.vocalease.ca"><%= image_tag("vocalease.png")%><span>Vocal Ease</span></a></li>
@@ -67,9 +73,10 @@
         <li><a href="http://2271a0d300.test-url.ws/hostuitive/"><%= image_tag("hostuitive.png")%>Hostuitive</a></li>
       </ul>
   </section>
+</div>
 
-  <div class="row" id="about">
-    <section class="section">
+  <div class="row">
+    <section class="section" id="about">
       <h3>About Me</h3>
       <%= image_tag("koan.jpg", class: "pull-right about-img") %>
       <ul>
@@ -80,8 +87,8 @@
     </section>
   </div>
 
-  <div class="row" id="blog">
-    <section class="section">
+  <div class="row">
+    <section class="section" id="blog">
       <div class="jumbotron">
         <h3>Latest Blog Post</h3>
         <h4><%= link_to "#{@post.title}", post_path(@post) %></h4>
@@ -91,8 +98,8 @@
     </section>
   </div>
 
-  <div class="row" id="contact">
-    <section class="section">
+  <div class="row">
+    <section class="section" id="contact">
       <h3>Contact</h3>
       <p>Interested in working together?  Send me an email with some details about the project and allow me a day or two to respond.</p>
       <ul>
